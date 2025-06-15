@@ -1,0 +1,11 @@
+item:
+  displayName: "Осколок"
+  lore: []
+  material: PLAYER_HEAD
+  baseHead: "example"
+messages:
+  reload: "Вы успешно перезагрузили плагин!"
+  noArgs: "У вас не хватает аргументов!"
+  playerIsOffline: "игрок [player] оффлайн!"
+  give: "вы выдали игроку [player] x[amount] осколков!"
+  take: "вы забрали у игрока [player] x[amount] осколков!"

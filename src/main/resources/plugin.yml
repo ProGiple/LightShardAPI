@@ -1,0 +1,27 @@
+name: LightShardAPI
+version: '${project.version}'
+main: org.satellite.dev.progiple.lightshardapi.LightShardAPI
+api-version: '1.16'
+depend:
+  - LunaSpring
+  - NBTAPI
+commands:
+  lightshardapi:
+    aliases:
+      - lsa
+      - lightshard
+      - lightshards
+      - lightshardsapi
+      - lsapi
+      - shard
+      - shards
+      - shardapi
+      - shardsapi
+      - sapi
+permissions:
+  lightshardapi.reload:
+    default: op
+  lightshardapi.give:
+    default: op
+  lightshardapi.take:
+    default: op
