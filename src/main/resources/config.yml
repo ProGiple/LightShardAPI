@@ -9,3 +9,4 @@ messages:
   playerIsOffline: "игрок [player] оффлайн!"
   give: "вы выдали игроку [player] x[amount] осколков!"
   take: "вы забрали у игрока [player] x[amount] осколков!"
+  onGet: "вы получили x[amount] осколков"

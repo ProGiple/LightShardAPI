@@ -35,6 +35,7 @@ public class GiveSubCommand implements LunaCompleter {
         int amount = strings.length >= 3 ? LunaMath.toInt(strings[2]) : 1;
         ((Player) offlinePlayer).getInventory().addItem(ShardAPI.createStack(amount));
         Config.sendMessage(sender, "give", "player-%-" + offlinePlayer.getName(), "amount-%-" + amount);
+        Config.sendMessage((CommandSender) offlinePlayer, "onGet", "amount-%-" + amount);
     }
 
     @Override

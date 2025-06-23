@@ -19,8 +19,6 @@ import java.util.List;
 @SubCommand(appliedCommand = "lightshardapi", commandIdentifiers = {"take"})
 @Check(permissions = {"lightshardapi.take"}, flags = {})
 public class TakeSubCommand implements LunaCompleter {
-    // lsa take [player] [amount]
-
     @Override
     public void invoke(CommandSender sender, String[] strings) {
         if (strings.length < 2) {
@@ -38,15 +36,7 @@ public class TakeSubCommand implements LunaCompleter {
         final int finalAmount = amount;
 
         Inventory inventory = ((Player) offlinePlayer).getInventory();
-        for (ItemStack content : inventory.getStorageContents()) {
-            if (amount <= 0) break;
-
-            if (ShardAPI.isShard(content)) {
-                int different = Math.min(amount, content.getAmount());
-                amount -= different;
-                content.setAmount(content.getAmount() - different);
-            }
-        }
+        amount = ShardAPI.takeShards(inventory, amount);
 
         Config.sendMessage(sender, "take", "player-%-" + offlinePlayer.getName(), "amount-%-" + (finalAmount - amount));
     }
